@@ -1,0 +1,12 @@
+# How to install flask in your system
+
+1. install python with pip in your device
+2. install vscode (source code editor)
+3. create folder named 'Flask Projects' and open it in vscode
+4. open terminal and run ` pip install virtualenv `
+5. write in terminal ` virtualenv env ` and it is create a directory named 'env'
+6. if it is not create and show error then change execution policy using ` Set-ExecutionPolicy unrestricted ` on cmd or Win Powershell
+7. write in the terminal ` .\env\Scripts\activate.bat ` or ` .\env\Scripts\activate.ps1 ` according to your system
+8. if it is give any error then set execution policy perfectly, and then you see as ` (env) PS C:\Vs programmes\Flask API> `
+9. write in (env) terminal ` pip install flask `
+10. create file named 'app.py' or 'main.py' to write the first flask api code. 
