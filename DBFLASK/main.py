@@ -1,14 +1,14 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 from flask_cors import CORS
 import dbsetup
 import sqlite3
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder="src/templates", static_folder="src/static")
 CORS(app) 
 
 @app.route('/')
 def read_root():
-    return "Welcome to DBFlask API, Please visit docs for more info..."
+    return render_template("index.html")
 
 @app.route('/query', methods=['POST'])
 def execute_query():
