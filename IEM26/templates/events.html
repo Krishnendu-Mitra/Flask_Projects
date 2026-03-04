@@ -1,0 +1,30 @@
+{% extends "index.html" %}
+{% block content %}
+{% set has_link = false %} 
+{% for event in events %} 
+    {% if event.google_link and event.google_link not in ["", "No record", "empty", "null"] %} 
+        {% set has_link = true %} 
+    {% endif %} 
+{% endfor %}
+<ul id="eventList">
+    <li class="flx">
+        <div class="head">Name of Events</div>
+        <div class="head">Dates</div>
+        <div class="head">Co-ordinator</div>
+        {% if has_link %} <div class="head link">Link</div> {% endif %}
+    </li>
+    {% for event in events %}
+    <li class="flx">
+        <div class="data">{{ event.name }}</div>
+        <div class="data">{{ event.date }}</div>
+        <div class="data">{{ event.coordenators }}</div>
+            {% if event.google_link and event.google_link not in ["", "No record", "empty", "null", "New Link"] %} 
+                <div class="data link"><a href="{{ event.google_link }}" target="_blank">{{ event.google_link }}</a></div> 
+            {% else %} 
+                <div class="data link" style="display: none;"></div> 
+            {% endif %} 
+        
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

@@ -1,0 +1,10 @@
+<li class="body">
+        <div class="flx">
+            <div class="data">{{ event.name }}</div>
+            <div class="data">{{ event.date }}</div>
+            <div class="data">{{ event.coordenators }}</div>
+        </div>
+        <div class="flx">
+            {% if event.google_link and event.google_link not in ["", "No record", "empty", "null"] %} <div class="data link"> <a href="{{ event.google_link }}" target="_blank">{{ event.google_link }}</a> </div> {% endif %}
+        </div>
+    </li>
