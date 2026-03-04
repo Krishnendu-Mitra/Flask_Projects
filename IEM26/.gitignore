@@ -1,0 +1,33 @@
+# Python bytecode and cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+venv/
+.env/
+.venv/
+env/
+ENV/
+
+# Environment variables
+*.env
+
+# Vercel build output
+.vercel/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Local data files (optional, if you don’t want to push test JSON/db)
+data/*.json
+
+# IDE/editor settings
+.vscode/
+.idea/
+*.swp
